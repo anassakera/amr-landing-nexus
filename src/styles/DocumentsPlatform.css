@@ -1,0 +1,129 @@
+.container {
+  direction: rtl;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.selection-screen header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.selection-screen h1 {
+  color: #007bff;
+  font-size: 1.8em;
+  margin-bottom: 1rem;
+}
+
+.selection-screen p {
+  font-size: 1.1em;
+  color: #6c757d;
+}
+
+.contract-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-bottom: 2rem;
+}
+
+.contract-type-btn {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.3rem;
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contract-type-btn:hover:not(:disabled) {
+  border-color: #007bff;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 123, 255, 0.15);
+  transform: translateY(-4px);
+  background-color: #f5f9ff;
+}
+
+.contract-type-btn span {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #343a40;
+  display: block;
+}
+
+.contract-type-btn small {
+  font-size: 0.8em;
+  color: #6c757d;
+  margin-top: 5px;
+  display: block;
+}
+
+.contract-type-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.contract-type-btn:disabled span {
+  color: #6c757d;
+}
+
+.icon {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.selection-screen footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #6c757d;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contract-types {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .contract-type-btn {
+    padding: 20px 15px;
+  }
+  
+  .icon {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .contract-types {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

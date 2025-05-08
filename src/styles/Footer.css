@@ -1,0 +1,149 @@
+:root {
+  --dark-color: #343a40;
+  --primary-color: #2563eb;
+  --transition-speed: 0.3s;
+}
+
+/* تطبيق الخط على كل العناصر */
+* {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.main-footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 2rem 0;
+  margin-top: auto; /* الدفع التلقائي للأسفل */
+  direction: rtl;
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h4 {
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 50px;
+  background-color: var(--primary-color);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-col p {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.footer-col a {
+  color: rgba(255,255,255,0.7);
+  transition: var(--transition-speed) ease;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: white;
+  padding-right: 3px;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: flex-start;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  transition: all var(--transition-speed) ease;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+}
+
+/* زر واتساب */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: 20px;
+    font-size: 22px;
+  }
+}
